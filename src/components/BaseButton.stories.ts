@@ -1,52 +1,56 @@
 import type { Meta, StoryObj } from "@storybook/vue3"
-
 import BaseButton from "./BaseButton.vue"
 
-// More on how to set up stories at: https://storybook.js.org/docs/vue/writing-stories/introduction
-const meta = {
-  title: "Example/BaseButton",
+const meta: Meta<typeof BaseButton> = {
   component: BaseButton,
-  // This component will have an automatically generated docsPage entry: https://storybook.js.org/docs/vue/writing-docs/autodocs
-  tags: ["autodocs"],
-  argTypes: {
-    size: { control: "select", options: ["small", "medium", "large"] },
-    backgroundColor: { control: "color" },
-    onClick: { action: "clicked" },
+  parameters: {
+    layout: "centered",
   },
-  args: { primary: false }, // default value
-} satisfies Meta<typeof BaseButton>
+  argTypes: {
+    size: { control: "select", options: ["sm", "lg"] },
+    variant: {
+      control: "select",
+      options: ["primary", "gray", "white"],
+    },
+  },
+  tags: ["autodocs"],
+}
 
 export default meta
-type Story = StoryObj<typeof meta>
-/*
- *👇 Render functions are a framework specific feature to allow you control on how the component renders.
- * See https://storybook.js.org/docs/vue/api/csf
- * to learn how to use render functions.
- */
-export const Primary: Story = {
+type Story = StoryObj<typeof BaseButton>
+
+export const Default: Story = {
+  render: (args) => ({
+    components: { BaseButton },
+    setup() {
+      return { args }
+    },
+    template: '<BaseButton v-bind="args">Submit</BaseButton>',
+  }),
   args: {
-    primary: true,
-    label: "BaseButton",
+    variant: "primary",
+    size: "lg",
+    class: "",
   },
 }
 
-export const Secondary: Story = {
+export const Icon: Story = {
+  render: (args) => ({
+    components: { BaseButton },
+    setup() {
+      return { args }
+    },
+    template: `<BaseButton v-bind="args"><svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 27 27" fill="none">
+    <rect x="5.75" y="2.75" width="16.5" height="20.8404" rx="1.39543" stroke="white" stroke-width="1.5"/>
+    <rect x="9.12695" y="9" width="5.23404" height="1.2766" rx="0.638298" fill="white"/>
+    <rect x="9" y="11.6807" width="5.23404" height="1.2766" rx="0.638298" fill="white"/>
+    <rect x="9" y="14.2339" width="7.14894" height="1.2766" rx="0.638298" fill="white"/>
+    <path d="M18.122 2.75C17.8131 3.62389 16.9797 4.25 16 4.25H13C12.0203 4.25 11.1869 3.62389 10.878 2.75H18.122Z" fill="#82B3F4" stroke="white" stroke-width="1.5"/>
+  </svg></BaseButton>`,
+  }),
   args: {
-    primary: false,
-    label: "BaseButton",
-  },
-}
-
-export const Large: Story = {
-  args: {
-    label: "BaseButton",
-    size: "large",
-  },
-}
-
-export const Small: Story = {
-  args: {
-    label: "BaseButton",
-    size: "small",
+    variant: "primary",
+    size: "sm",
+    class: "",
   },
 }

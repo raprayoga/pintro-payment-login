@@ -18,7 +18,7 @@ const buttonVariants = cva(
     },
     defaultVariants: {
       variant: "primary",
-      size: "sm",
+      size: "lg",
     },
   }
 )
@@ -32,17 +32,17 @@ withDefaults(
     props?: ButtonHTMLAttributes
   }>(),
   {
-    variant: "gray",
+    variant: "primary",
     size: "lg",
   }
 )
 
 const emit = defineEmits<{
-  (e: "click", id: number): void
+  (e: "click"): void
 }>()
 
 const onClick = () => {
-  emit("click", 1)
+  emit("click")
 }
 </script>
 

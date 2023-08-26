@@ -60,7 +60,7 @@ export default {
 
       setTimeout(() => {
         isShowText3.value = false
-      }, 4000)
+      }, 5000)
 
       setInterval(() => {
         setTime3()
@@ -78,48 +78,50 @@ export default {
 </script>
 
 <template>
-  <swiper
-    :slides-per-view="1"
-    :scrollbar="{ draggable: false }"
-    :autoplay="{
-      delay: 5000,
-      disableOnInteraction: true,
-    }"
-    :allowTouchMove="false"
-    :modules="modules"
-  >
-    <swiper-slide><Slide1 class="h-[450px] justify-center" /></swiper-slide>
-    <swiper-slide> <Slide2 class="h-[450px] justify-center" /> </swiper-slide>
-    <swiper-slide><Slide3 class="h-[450px] justify-center" /></swiper-slide>
-  </swiper>
+  <div>
+    <swiper
+      :slides-per-view="1"
+      :scrollbar="{ draggable: false }"
+      :autoplay="{
+        delay: 5000,
+        disableOnInteraction: true,
+      }"
+      :allowTouchMove="false"
+      :modules="modules"
+    >
+      <swiper-slide><Slide1 class="h-[450px] justify-center" /></swiper-slide>
+      <swiper-slide> <Slide2 class="h-[450px] justify-center" /> </swiper-slide>
+      <swiper-slide><Slide3 class="h-[450px] justify-center" /></swiper-slide>
+    </swiper>
 
-  <div class="mx-auto max-w-[384px] text-center">
-    <Transition name="fade">
-      <div v-if="isShowText1">
-        <p class="text-xl">Tingkatkan penerimaan dengan transaksi online</p>
-        <p class="text-xs mt-3s">
-          Cek dan update transaksi harian maupun bulanan mudah dalam genggaman
-        </p>
-      </div>
-    </Transition>
-    <Transition name="fade">
-      <div v-if="isShowText2">
-        <p class="text-xl">Rekonsiliasi keuangan yang lebih mudah</p>
-        <p class="text-xs mt-3s">
-          Setiap transaksi akan tercatat secara otomatis dalam sistem pembayaran
-          dengan cepat & transparan
-        </p>
-      </div>
-    </Transition>
-    <Transition name="fade">
-      <div v-if="isShowText3">
-        <p class="text-xl">Mendukung 25+ channel pembayaran</p>
-        <p class="text-xs mt-3s">
-          Tersedia lebih dari 25 channel pembayaran yang dapat meningkatkan
-          kepuasaan saat bertransaksi
-        </p>
-      </div>
-    </Transition>
+    <div class="mx-auto max-w-[384px] text-center">
+      <Transition name="fade">
+        <div v-if="isShowText1">
+          <p class="text-xl">Tingkatkan penerimaan dengan transaksi online</p>
+          <p class="text-xs mt-3s">
+            Cek dan update transaksi harian maupun bulanan mudah dalam genggaman
+          </p>
+        </div>
+      </Transition>
+      <Transition name="fade">
+        <div v-if="isShowText2">
+          <p class="text-xl">Rekonsiliasi keuangan yang lebih mudah</p>
+          <p class="text-xs mt-3s">
+            Setiap transaksi akan tercatat secara otomatis dalam sistem
+            pembayaran dengan cepat & transparan
+          </p>
+        </div>
+      </Transition>
+      <Transition name="fade">
+        <div v-if="isShowText3">
+          <p class="text-xl">Mendukung 25+ channel pembayaran</p>
+          <p class="text-xs mt-3s">
+            Tersedia lebih dari 25 channel pembayaran yang dapat meningkatkan
+            kepuasaan saat bertransaksi
+          </p>
+        </div>
+      </Transition>
+    </div>
   </div>
 </template>
 

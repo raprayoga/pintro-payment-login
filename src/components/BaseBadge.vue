@@ -9,6 +9,7 @@ const badgeVariant = cva(
       variant: {
         blue: "bg-blue-50",
         green: "bg-green-100",
+        yellow: "bg-yellow-100 text-yellow-800",
       },
       isRounded: {
         true: "rounded-full",

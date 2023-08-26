@@ -9,7 +9,7 @@ const cardVariants = cva(" text-white rounded-lg", {
     },
     size: {
       lg: "rounded-xl p-6",
-      sm: "rounded-lg px-6 py-0",
+      sm: "rounded-lg px-6 py-2",
     },
   },
   defaultVariants: {

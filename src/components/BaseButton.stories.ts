@@ -10,9 +10,8 @@ const meta: Meta<typeof BaseButton> = {
     size: { control: "select", options: ["sm", "lg"] },
     variant: {
       control: "select",
-      options: ["primary", "gray"],
+      options: ["primary", "gray", "white"],
     },
-    onClick: { action: "clicked" },
   },
   tags: ["autodocs"],
 }

@@ -36,9 +36,7 @@
 
 ## About The Project
 
-This application is a Dashboard vue student app in desktop and mobile view
-
-You can visit the app [here](https://phone-book-project-git-develop-raprayoga.vercel.app/) too.
+This application is a Login page to payment app
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

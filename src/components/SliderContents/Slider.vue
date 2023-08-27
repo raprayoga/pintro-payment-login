@@ -60,7 +60,7 @@ export default {
 
       setTimeout(() => {
         isShowText3.value = false
-      }, 5000)
+      }, 4700)
 
       setInterval(() => {
         setTime3()
@@ -94,7 +94,7 @@ export default {
       <swiper-slide><Slide3 class="h-[450px] justify-center" /></swiper-slide>
     </swiper>
 
-    <div class="mx-auto max-w-[384px] text-center">
+    <div class="mx-auto max-w-[384px] h-[100px] overflow-y-hidden text-center">
       <Transition name="fade">
         <div v-if="isShowText1">
           <p class="text-xl">Tingkatkan penerimaan dengan transaksi online</p>

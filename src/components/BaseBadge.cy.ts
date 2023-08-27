@@ -4,7 +4,7 @@ describe("<BaseBadge />", () => {
   it("renders", () => {
     // see: https://on.cypress.io/mounting-vue
     const textBadge = "BADGE"
-    cy.mount(BaseBadge, {
+    cy.mount<any>(BaseBadge, {
       props: {
         variant: "green",
         isRounded: true,

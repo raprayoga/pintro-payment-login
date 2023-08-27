@@ -2,7 +2,7 @@ import LoginForm from "./LoginForm.vue"
 
 describe("<LoginForm />", () => {
   it("renders", () => {
-    cy.mount(LoginForm, {
+    cy.mount<any>(LoginForm, {
       props: {
         class: "w-[384px]",
       },
@@ -16,7 +16,7 @@ describe("<LoginForm />", () => {
     const passInput = "123456"
     const onSubmit = cy.spy().as("onSubmit")
 
-    cy.mount(LoginForm, {
+    cy.mount<any>(LoginForm, {
       props: {
         onSubmit: onSubmit,
       },

@@ -4,7 +4,7 @@ describe("<BaseCard />", () => {
   it("renders", () => {
     // see: https://on.cypress.io/mounting-vue
     const textCard = "CARD"
-    cy.mount(BaseCard, {
+    cy.mount<any>(BaseCard, {
       props: {
         variant: "white",
         size: "lg",

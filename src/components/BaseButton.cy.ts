@@ -3,7 +3,7 @@ import BaseButton from "./BaseButton.vue"
 describe("<BaseButton />", () => {
   it("renders", () => {
     // see: https://on.cypress.io/mounting-vue
-    cy.mount(BaseButton, {
+    cy.mount<any>(BaseButton, {
       props: {
         variant: "primary",
         size: "lg",

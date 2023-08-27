@@ -2,7 +2,7 @@ import BaseInput from "./BaseInput.vue"
 
 describe("<BaseInput />", () => {
   it("renders", () => {
-    cy.mount(BaseInput, {
+    cy.mount<any>(BaseInput, {
       props: {
         class: "w-[500px]",
       },
@@ -15,7 +15,7 @@ describe("<BaseInput />", () => {
   })
 
   it("user input", () => {
-    cy.mount(BaseInput)
+    cy.mount<any>(BaseInput)
     const textInput = "Im Typing"
 
     cy.get('[data-cy="base-input-element"]')
